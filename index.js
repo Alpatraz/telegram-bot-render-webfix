@@ -9,11 +9,5 @@ bot.onText(/\/start/, (msg) => {
   bot.sendMessage(chatId, '✅ Le bot fonctionne depuis un Web Service Render !');
 });
 
-// TEMP : Affiche le chat_id dans les logs
-bot.on('message', (msg) => {
-  console.log("📥 Nouveau message reçu !");
-  console.log("Chat ID :", msg.chat.id);
-});
-
 // Faux serveur pour "ouvrir un port" sur Render
 require('http').createServer(() => {}).listen(process.env.PORT || 3000);
